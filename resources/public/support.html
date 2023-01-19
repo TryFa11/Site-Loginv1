@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Support Center</title>
+  <script src='/main.js'></script>
+</head>
+<body>
+ <style>
+   nav li {
+     display: block;
+     list-style-type: none;
+     float: right;
+     width: 60px;
+     margin-left: 40px;
+   }
+   a {
+     margin: auto;
+     text-decoration: none;
+   },
+ </style>
+  <center>TryFall.Repl.Co</center>
+      <nav>
+        <center>TryFall.Repl.Co</center>
+        <ul>
+          <li><a href='/home'>Home</a></li>
+          <li><a href='/'>Contact</a></li>
+          <li><a href='/login' id='status'>login</a></li>
+        </ul>
+  </nav>
+  <form action="/auth/reset" method="post">  
+            <div class="container">   
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>            <br>
+            <button type="submit">Send</button> 
+        </div>   
+    </form> 
+</body>
+</html>

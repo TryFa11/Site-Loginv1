@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register Centre</title>
+  </head>
+  <style>
+    nav li {
+     display: block;
+     list-style-type: none;
+     float: right;
+     width: 60px;
+     margin-left: 40px;
+   }
+  .container {
+      text-align: center;
+      border-style: solid;
+      border-color: black;
+      border-radius: 5px;
+      border-width: 1px;
+      width: 350px;
+      height: 250px;
+    margin: auto;
+    padding-top: 25px;
+  }
+  form {
+    text-align: center;
+  }
+    form button {
+      border-radius: 5px;
+      border-width: 1px;
+      margin-right: 5%;
+      width: 25%;
+      border: 1px solid black;
+      background: transparent;
+      font-family: 'Roboto', sans-serif;
+      color: #000000;
+      border-radius: 5px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      transition: .3s;
+    }
+    form button:hover {
+       border: 1px solid #104F55;
+        background-color: rgba(365,365,365,0.5);
+        cursor: pointer;
+        color: #104F55;
+        opacity: .8;
+        transition: .3s;
+        box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2);
+    }
+    form input {
+      margin-top: 5px;
+    }
+    form h2 {
+     text-align: center;
+      text-decoration: none;
+    }
+    p {
+      color: grey;
+      font-size: 13px;
+    }
+    a {
+     color: white
+     margin: 10px;
+     text-decoration: none;
+   }
+  </style>
+<body>
+  <nav>
+        <ul>
+          <center>TryFall.Repl.Co</center>
+          <li><a href='/home'>Home</a></li>
+          <li><a href='/'>Contact</a></li>
+          <li><a href='/login' id='status'>login</a></li>
+        </ul>
+  </nav>
+    <form action="/auth/register" method="post">
+      <h2>Account Creation</h2>
+            <div class="container">   
+            <label>Username </label>   
+            <input type="text" name="username" id="user" maxlength=16 required><br>
+            <label>Password </label>
+            <input type="password" name="password" id="pass" maxlength=12 required> <br> 
+              <input type="checkbox" id="terms" name="tos" required=true>
+              <label for="terms">By Checking this box you agree to our <a>terms of service</a></label><br>
+              <button type="submit">Register</button><h5>Have An <a href='/login'>Account?</a></h5>
+        </div>   
+    </form> 
+</body>
+</html>
