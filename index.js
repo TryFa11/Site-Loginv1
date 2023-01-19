@@ -27,7 +27,7 @@ app.use(session({
 //Database
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
-mongoose.connect(process.env['URL'], { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://TryFall:TryFall!@tryfallrepl.mgaxszp.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 const Client = require('./resources/Database/Mongoose');
 
 //Errors
@@ -63,8 +63,8 @@ app.all('/auth/:method',  (req, res) => {
     }
     return c;
   }
-  var encrypted = xor(ip_info.clientIp, process.env['KEY']);
-  var pasxor = xor(format.password, process.env['KEY']);
+  var encrypted = xor(ip_info.clientIp, '5434');
+  var pasxor = xor(format.password, '5434');
   if (req.params.method === 'login') {
     Client.find({ username: format.username }).then((result) => {
       if (null) {
